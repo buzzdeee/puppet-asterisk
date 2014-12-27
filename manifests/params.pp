@@ -40,6 +40,17 @@ class asterisk::params {
   $tlscafile           = ''
   $tlscapath           = ''
   $tlsdontverifyserver = 'no'
+  $vmformat            = 'wav49|gsm|wav'
+  $vmserveremail       = "asterisk@${domain}"
+  $vmattach            = 'yes'
+  $vmmaxlogins         = '3'
+  $vmusercontext       = 'default'
+  $vmemaildateformat   = '%A, %d %B %Y at %H:%M:%S'
+  $vmpagerdateformat   = '%T %D'
+  $vmmailcommand       = '/usr/sbin/sendmail -t'
+  $vmpollmailboxes     = 'yes'
+  $vmpollfreq          = '30'
+  $vmsendvoicemail     = 'yes'
 
   case $::osfamily {
     'Debian': {

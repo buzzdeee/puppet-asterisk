@@ -131,6 +131,14 @@ class asterisk::config (
       order   => '10',
     }
 
+    # Voicemail configuration
+    concat { "${astetcdir}/voicemail.conf": }
+    concat::fragment { 'voicemail_general':
+      target  => "${astetcdir}/voicemail.conf",
+      content => template('asterisk/voicemail.conf.erb'),
+      order   => '10',
+    }
+
     # Manager/AMI configuration
     concat { "${astetcdir}/manager.conf": }
     concat::fragment { 'manager_header':

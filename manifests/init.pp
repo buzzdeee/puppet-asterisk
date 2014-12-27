@@ -293,6 +293,17 @@ class asterisk(
   $ext_userscontext         = $asterisk::params::ext_userscontext,
   $ext_includes             = $asterisk::params::ext_includes,
   $ext_execs                = $asterisk::params::ext_execs,
+  $vmformat                 = $asterisk::params::vmformat,
+  $vmserveremail            = $asterisk::params::vmserveremail,
+  $vmattach                 = $asterisk::params::vmattach,
+  $vmmaxlogins              = $asterisk::params::vmmaxlogins,
+  $vmusercontext            = $asterisk::params::vmusercontext,
+  $vmemaildateformat        = $asterisk::params::vmemaildateformat,
+  $vmpagerdateformat        = $asterisk::params::vmpagerdateformat,
+  $vmmailcommand            = $asterisk::params::vmmailcommand,
+  $vmpollmailboxes          = $asterisk::params::vmpollmailboxes,
+  $vmpollfreq               = $asterisk::params::vmpollfreq,
+  $vmsendvoicemail          = $asterisk::params::vmsendvoicemail,
 ) inherits asterisk::params {
 
   validate_string($package_ensure, $package_name)

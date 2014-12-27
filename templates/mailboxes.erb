@@ -1,0 +1,48 @@
+[default]
+
+1234 => 4242,Example Mailbox,root@localhost
+;4200 => 9855,Mark Spencer,markster@linux-support.net,mypager@digium.com,attach=no|serveremail=myaddy@digium.com|tz=central|maxmsg=10
+;4300 => 3456,Ben Rigas,ben@american-computer.net
+;4310 => -5432,Sales,sales@marko.net
+;4069 => 6522,Matt Brooks,matt@marko.net,,|tz=central|attach=yes|saycid=yes|dialout=fromvm|callback=fromvm|review=yes|operator=yes|envelope=yes|moveheard=yes|sayduration=yes|saydurationm=1
+;4073 => 1099,Bianca Paige,bianca@biancapaige.com,,delete=1|emailsubject=You have a new voicemail.|emailbody=Click on the attachment to listen.|rip=2010-06-04
+;4110 => 3443,Rob Flynn,rflynn@blueridge.net
+;4235 => 1234,Jim Holmes,jim@astricon.ips,,Tz=european
+
+
+;
+; Mailboxes may be organized into multiple contexts for
+; voicemail virtualhosting
+;
+
+[other]
+;The intro can be customized on a per-context basis
+;directoryintro=dir-company2
+1234 => 5678,Company2 User,root@localhost
+
+; example for our acme compartmentalized company
+;
+; Pete telecommutes from Chicago, so we'll customize timestamps for him.
+;
+;[acme]
+;111 => 7383,Pete,pete@acme-widgets.com,,tz=central
+;112 => 6262,Nancy,nancy@acme-widgets.com
+;
+
+; ---------------------------------------------------------------------------
+; IMAP user settings and overrides.  These are only applicable when Asterisk is
+; compiled with IMAP support.
+;
+; imapuser=username                ; The IMAP username of the mailbox to access
+; imappassword=password            ; The IMAP password of the user
+; imapvmshareid=xxxx               ; A shared mailbox ID to use for the IMAP mailbox
+                                   ; login, as opposed to the mailbox dialed
+; imapfolder                       ; Overrides the global imapfolder setting
+; imapserver                       ; Overrides the global imapserver setting
+; imapport                         ; Overrides the global imapport setting
+; imapflags                        ; Overrides the global imapflags setting
+
+;
+;[imapvm]
+;4324 => 7764,Ellis Redding,red@buxton.us,,imapuser=eredding|imappassword=g3tbusy|imapfolder=notinbox
+;4325 => 2392,Andrew Dufresne,andy@dufresne.info,,imapuser=adufresne|imappassword=rockh@mmer
